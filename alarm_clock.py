@@ -1,8 +1,8 @@
 class Clock:
     def __init__(self):
-        self.time = 1300
+        self.time = '1300'
         self.switch = False
-        self.alarm = ()
+        self.alarm = ""
 
     def tell_current_time(self):
         print(self.time)
@@ -15,5 +15,10 @@ class Clock:
         print(self.switch)
 
     def set_alarm(self):
-        input("What time would you like the alarm to go off?")
+        self.alarm = input("What time would you like the alarm to go off?")
         print(self.alarm)
+
+    def clock_function(self):
+        self.tell_current_time()
+        self.flip_switch()
+        self.set_alarm()
